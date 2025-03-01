@@ -10,6 +10,7 @@
 
 <script src="https://kit.fontawesome.com/8bf0a0cf28.js" crossorigin="anonymous"></script>
 
+
 </head>
 <body class="bg-slate-200">
 
@@ -31,7 +32,7 @@
                     <div class="flex justify-around gap-3 p-2 rounded-xl items-center bg-slate-200 ">
                         <!-- <i class="fa-regular fa-square-check bg-blue-600 text-2xl border-none text-white"></i> -->
                          <img src="assets/checkbox.png" alt="">
-                        <p class="  text-xl font-bold">23</p>
+                        <p id="nav-number" class="  text-xl font-bold">24</p>
                     </div>
 
                     <a id="color-btn" class="btn  btn-circle  w-16 h-16">
@@ -43,28 +44,32 @@
 
         <main class="   mb-8  ">
 
-           <section class="flex justify-around gap-x-4 ">
+           <section class="flex justify-around md:gap-x-4 md:flex-row flex-col gap-y-4">
+
+
                <div  class="flex-1 p-6 bg-base-100 rounded-lg">
   
                 <!-- nav-cards container -->
 
-                   <div class="flex justify-between gap-5 mb-5">
+                   <div class="flex justify-between gap-5 mb-5 flex-col md:flex-row">
   
-                       <div class="bg-slate-200 flex p-3 w-1/4 justify-around rounded-lg items-center">
+                       <div class="bg-slate-200 flex p-3 md:w-1/4 md:justify-around
+                       justify-between rounded-lg items-center w-full">
                            <div class="p-2 bg-slate-300 rounded-full h-12 ">
                                 <img src="assets/checkbox.png"  alt="" >
     
                             </div>
                             <div>
                                 <p>Task Assigned</p>
-                                <p class="font-bold text-xl">05</p>
+                                <p id="task-number" class="font-bold text-xl">06</p>
                             </div>
                         </div>
     
     
-                        <div id="discover-box" class="w-1/2 bg-gradient-to-r from-cyan-500 to-blue-200 justify-around rounded-lg p-3 cursor-pointer">
+                        <div id="discover-box" class="md:w-1/2 w-full  bg-gradient-to-r from-cyan-500 to-blue-200 rounded-lg p-3 cursor-pointer">
      
-                            <div class="flex justify-around items-center">
+                            <div class="flex md:justify-around
+                            justify-between items-center">
                                 <img src="assets/board.png" alt="">
                                 <p class="text-white">Discover Something <br> New Today!</p>
                             </div>
@@ -72,15 +77,13 @@
                         </div>
     
     
-                        <div class="bg-slate-200 flex p-3 w-1/4 justify-around items-center rounded-lg">
+                        <div class="bg-slate-200 flex p-3 md:w-1/4 w-full md:justify-around
+                        justify-between items-center rounded-lg">
                             <div class="p-2 bg-slate-300 rounded-full h-12 ">
                                 <img src="assets/calender.png"  alt="" >
     
                             </div>
-                            <div>
-                                <p>Wed,</p>
-                                <p class="font-bold text-xl">
-                                    Jul 28 2025 </p>
+                            <div id="current-Date">
                             </div>
                         </div>
                     </div>
@@ -88,7 +91,7 @@
 
                     <!-- card container -->
 
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                         <div class="card bg-slate-200 shadow-xl ">
                             
@@ -108,7 +111,7 @@
 
     <p><span class="font-light text-md">Deadline</span><br>21 March 2025</p>
 
-    <button class="btn btn-primary">Completed</button>
+    <button  class="btn btn-primary completed-btn">Completed</button>
 </div>
 
                             </div>
@@ -131,7 +134,7 @@
 
     <p><span class="font-light text-md">Deadline</span><br>21 March 2025</p>
 
-    <button class="btn btn-primary">Completed</button>
+    <button class="btn btn-primary completed-btn ">Completed</button>
 </div>
 
                             </div>
@@ -155,7 +158,7 @@
 
     <p><span class="font-light text-md">Deadline</span><br>21 March 2025</p>
 
-    <button class="btn btn-primary">Completed</button>
+    <button class="btn btn-primary completed-btn">Completed</button>
 </div>
 
                             </div>
@@ -179,7 +182,7 @@
 
     <p><span class="font-light text-md">Deadline</span><br>21 March 2025</p>
 
-    <button class="btn btn-primary">Completed</button>
+    <button class="btn btn-primary completed-btn">Completed</button>
 </div>
 
                             </div>
@@ -203,7 +206,7 @@
 
     <p><span class="font-light text-md">Deadline</span><br>21 March 2025</p>
 
-    <button class="btn btn-primary">Completed</button>
+    <button class="btn btn-primary completed-btn">Completed</button>
 </div>
 
                             </div>
@@ -227,7 +230,7 @@
 
     <p><span class="font-light text-md">Deadline</span><br>21 March 2025</p>
 
-    <button class="btn btn-primary">Completed</button>
+    <button class="btn btn-primary completed-btn">Completed</button>
 </div>
 
                             </div>
@@ -238,8 +241,8 @@
     
                 </div>
                 
-    
-                <div class=" w-60 h-screen p-4 bg-base-100 rounded-lg">
+    <!-- sidebar -->
+                <div class="w-full md:w-60 h-screen p-4 bg-base-100 rounded-lg">
                     <h1 class="text-center mb-3">
     
                         <i class="fa-solid fa-clock-rotate-left"></i>  <span>Activity </span>
