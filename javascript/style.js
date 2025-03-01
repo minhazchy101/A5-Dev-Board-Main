@@ -15,6 +15,12 @@ document.getElementById("color-btn").addEventListener(`click`, function(){
     document.body.style.backgroundColor = changeColor() ;
 })
 
+document.getElementById("discover-box").addEventListener("click", function () {
+    
+    window.location.href = "./qna.html";
+
+})
+
 
 
 
