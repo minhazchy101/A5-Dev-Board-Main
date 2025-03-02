@@ -82,7 +82,12 @@ complete.forEach(function (complete) {
             messageDiv.style.margin = "5px";
             messageDiv.style.borderRadius = "10px";
             messageDiv.style.backgroundColor = "lightgray";
-            messageDiv.textContent = `You have Complete The TASK at 12:48:15 PM`;
+ 
+            
+
+
+messageDiv.textContent = `You have Complete The TASK at "${formattedTime}"`;
+
 
             
             activityContainer.appendChild(messageDiv);
@@ -93,7 +98,25 @@ complete.forEach(function (complete) {
     
 })
 
+let atTime = new Date();
+let hours = atTime.getHours();
+let minutes = atTime.getMinutes();
+let seconds = atTime.getSeconds();
+let ampm = hours >= 12 ? 'PM' : 'AM';
+hours = hours % 12;
+hours = hours ? hours : 12; 
+minutes = minutes < 10 ? '0' + minutes : minutes;
+seconds = seconds < 10 ? '0' + seconds : seconds;
 
+let formattedTime = `${hours}:${minutes}:${seconds} ${ampm}`;
+
+
+document.getElementById("clear-btn").addEventListener("click",function(){
+    
+    document.getElementById("activity-container").style.display = "none";
+    
+    // console.log("none")
+})
 
 // const theBtn = document.querySelectorAll(".the-btn")
 // for (let index = 0; index < theBtn.length; index++) {
