@@ -48,34 +48,60 @@ complete.forEach(function (complete) {
         
         complete.setAttribute(`disabled`, true)
         alert("Board update Successfully")
-        
-        
-        
-        
-        
+                // 
         let convertTaskNumber = parseInt(taskNumber.innerText);
-        
-    convertTaskNumber--;
-
-    taskNumber.innerText = convertTaskNumber;
+        convertTaskNumber--;
+        taskNumber.innerText = convertTaskNumber;
     
            let convertNavNumber = parseInt(navNumber.innerText);
-
            convertNavNumber++;
-
            navNumber.innerText = convertNavNumber;
+        //    
 
            buttons++;
            if (buttons === 6) {
                alert("Congrates!! You have completed all the current task")
            }
+        
+           
+           
+           
+        //    const theBtn = document.querySelectorAll(".card-title")
+        //    const cardTitle1 = "Fix Mobile Button Issue";
+        //    for (let index = 0; index < theBtn.length; index++) {
+        //        const element = theBtn[index].innerText;
+        //         }
+        // const cardTitle1 = document.getElementById("card-title-1")
 
 
-    })
+           const activityContainer = document.getElementById("activity-container")
+
+           
+        const messageDiv = document.createElement('div');
+            messageDiv.style.padding = "6px";
+            messageDiv.style.margin = "5px";
+            messageDiv.style.borderRadius = "10px";
+            messageDiv.style.backgroundColor = "lightgray";
+            messageDiv.textContent = `You have Complete The TASK at 12:48:15 PM`;
+
+            
+            activityContainer.appendChild(messageDiv);
+
+
+            
+ })
     
 })
 
 
+
+// const theBtn = document.querySelectorAll(".the-btn")
+// for (let index = 0; index < theBtn.length; index++) {
+//     const element = theBtn[index];
+
+//     console.log(element)
+    
+// }
 
 
 

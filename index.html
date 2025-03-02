@@ -53,7 +53,7 @@
 
                    <div class="flex justify-between gap-5 mb-5 flex-col md:flex-row">
   
-                       <div class="bg-slate-200 flex p-3 md:w-1/4 md:justify-around
+                       <div class="bg-slate-200 flex p-3 md:w-1/4 lg:justify-around
                        justify-between rounded-lg items-center w-full">
                            <div class="p-2 bg-slate-300 rounded-full h-12 ">
                                 <img src="assets/checkbox.png"  alt="" >
@@ -68,7 +68,7 @@
     
                         <div id="discover-box" class="md:w-1/2 w-full  bg-gradient-to-r from-cyan-500 to-blue-200 rounded-lg p-3 cursor-pointer">
      
-                            <div class="flex md:justify-around
+                            <div class="flex lg:justify-around
                             justify-between items-center">
                                 <img src="assets/board.png" alt="">
                                 <p class="text-white">Discover Something <br> New Today!</p>
@@ -77,7 +77,7 @@
                         </div>
     
     
-                        <div class="bg-slate-200 flex p-3 md:w-1/4 w-full md:justify-around
+                        <div class="bg-slate-200 flex p-3 md:w-1/4 w-full lg:justify-around
                         justify-between items-center rounded-lg">
                             <div class="p-2 bg-slate-300 rounded-full h-12 ">
                                 <img src="assets/calender.png"  alt="" >
@@ -91,13 +91,13 @@
 
                     <!-- card container -->
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
 
                         <div class="card bg-slate-200 shadow-xl ">
                             
                             <div class="card-body gap-y-4">
                                 <div class="badge  bg-base-100">ShopEase</div>
-                              <h2 class="card-title">
+                              <h2 class="card-title" id="card-title-1">
                                 Fix Mobile Button Issue 
                                
                               </h2>
@@ -121,7 +121,7 @@
                             
                             <div class="card-body gap-y-4">
                                 <div class="badge  bg-base-100">CloudSync</div>
-                              <h2 class="card-title">
+                              <h2 class="card-title" onclick="handleClick(2)" >
                                 Add Dark Mode 
                                
                               </h2>
@@ -144,7 +144,7 @@
                             
                             <div class="card-body gap-y-4">
                                 <div class="badge  bg-base-100">SwiftPay</div>
-                              <h2 class="card-title">
+                              <h2 class="card-title" onclick="handleClick(3)">
                                 Optimize  Home page 
                                
                               </h2>
@@ -168,7 +168,7 @@
                             
                             <div class="card-body gap-y-4">
                                 <div class="badge  bg-base-100">Meta</div>
-                              <h2 class="card-title">
+                              <h2 class="card-title" onclick="handleClick(4)">
                                 Add new emoji 🤲 
                                
                               </h2>
@@ -192,7 +192,7 @@
                             
                             <div class="card-body gap-y-4">
                                 <div class="badge  bg-base-100">Google LLC</div>
-                              <h2 class="card-title">
+                              <h2 class="card-title" onclick="handleClick(5)">
                                 Integrate OpenAI API 
                                
                               </h2>
@@ -216,7 +216,7 @@
                             
                             <div class="card-body gap-y-4">
                                 <div class="badge  bg-base-100">Glassdoar</div>
-                              <h2 class="card-title">
+                              <h2 class="card-title" onclick="handleClick(6)">
                                 Improve Job searching
                                
                               </h2>
@@ -243,14 +243,24 @@
                 
     <!-- sidebar -->
                 <div class="w-full md:w-60 h-screen p-4 bg-base-100 rounded-lg">
-                    <h1 class="text-center mb-3">
-    
+
+                  <div class="text-center mb-4">
+                    <h1 class=" mb-3">
                         <i class="fa-solid fa-clock-rotate-left"></i>  <span>Activity </span>
                     </h1>
-                    <div class="text-center">
-                        <button class="btn btn-primary">Clear History</button>
+                    <button class="btn btn-primary">Clear History</button>
+                  </div>
+
+<div id="activity-container">
+
+  <!-- <div class="bg-slate-200 p-1 rounded-md text-sm ">
+
     
-                    </div>
+    
+  </div> -->
+
+</div>
+
                 </div>
             </section>
 
