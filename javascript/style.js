@@ -1,7 +1,4 @@
-// alert("okay")
-
-/*nav section*/ 
-
+ 
 function changeColor() {
     const letters = '0123456789ABCDEF';
             let color = '#';
@@ -63,40 +60,27 @@ complete.forEach(function (complete) {
                alert("Congrates!! You have completed all the current task")
            }
         
-           
-           
-           
-        //    const theBtn = document.querySelectorAll(".card-title")
-        //    const cardTitle1 = "Fix Mobile Button Issue";
-        //    for (let index = 0; index < theBtn.length; index++) {
-        //        const element = theBtn[index].innerText;
-        //         }
-        // const cardTitle1 = document.getElementById("card-title-1")
-
-
-           const activityContainer = document.getElementById("activity-container")
-
-           
+           const theBtn = document.querySelectorAll(".card-title")
+           for (let index = 0; index < theBtn.length; index++) {
+               const element = theBtn[index].innerText;
+               
+                }
+       
         const messageDiv = document.createElement('div');
-            messageDiv.style.padding = "6px";
-            messageDiv.style.margin = "5px";
-            messageDiv.style.borderRadius = "10px";
-            messageDiv.style.backgroundColor = "lightgray";
- 
-            
-
-
-messageDiv.textContent = `You have Complete The TASK at "${formattedTime}"`;
-
-
-            
-            activityContainer.appendChild(messageDiv);
-
-
-            
- })
+        
+        messageDiv.style.padding = "6px";
+        messageDiv.style.margin = "5px";
+        messageDiv.style.borderRadius = "10px";
+        messageDiv.style.backgroundColor = "lightgray";
+        
+        messageDiv.textContent = `You have Complete The ${theBtn.innerText} TASK at "${formattedTime}"`;
+        
+        activityContainer.appendChild(messageDiv);
+        
+    })
     
 })
+const activityContainer = document.getElementById("activity-container")
 
 let atTime = new Date();
 let hours = atTime.getHours();
@@ -112,10 +96,9 @@ let formattedTime = `${hours}:${minutes}:${seconds} ${ampm}`;
 
 
 document.getElementById("clear-btn").addEventListener("click",function(){
-    
-    document.getElementById("activity-container").style.display = "none";
-    
-    // console.log("none")
+        
+    activityContainer.innerHTML = "";
+  
 })
 
 // const theBtn = document.querySelectorAll(".the-btn")
