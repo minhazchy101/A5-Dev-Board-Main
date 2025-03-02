@@ -1,4 +1,7 @@
- 
+
+
+//  
+
 function changeColor() {
     const letters = '0123456789ABCDEF';
             let color = '#';
@@ -38,16 +41,23 @@ const complete = document.querySelectorAll(".completed-btn");
 const taskNumber = document.getElementById("task-number");
 
 let buttons = 0;
+let clicks = 0;
+let cards = 6;
+
+const theBtn = document.querySelectorAll(".the-btn")
 
 
 complete.forEach(function (complete) {
     complete.addEventListener("click", function () {
+
+        
         
         complete.setAttribute(`disabled`, true)
         alert("Board update Successfully")
                 // 
         let convertTaskNumber = parseInt(taskNumber.innerText);
-        convertTaskNumber--;
+        convertTaskNumber-- ;
+
         taskNumber.innerText = convertTaskNumber;
     
            let convertNavNumber = parseInt(navNumber.innerText);
@@ -60,12 +70,9 @@ complete.forEach(function (complete) {
                alert("Congrates!! You have completed all the current task")
            }
         
-           const theBtn = document.querySelectorAll(".card-title")
-           for (let index = 0; index < theBtn.length; index++) {
-               const element = theBtn[index].innerText;
-               
-                }
-       
+         
+        const cardNumber = complete.getAttribute('data-card');
+           
         const messageDiv = document.createElement('div');
         
         messageDiv.style.padding = "6px";
@@ -73,9 +80,10 @@ complete.forEach(function (complete) {
         messageDiv.style.borderRadius = "10px";
         messageDiv.style.backgroundColor = "lightgray";
         
-        messageDiv.textContent = `You have Complete The ${theBtn.innerText} TASK at "${formattedTime}"`;
+        messageDiv.textContent = `You have Complete The ${cardNumber} TASK at "${formattedTime}"`;
         
         activityContainer.appendChild(messageDiv);
+                
         
     })
     
@@ -96,18 +104,13 @@ let formattedTime = `${hours}:${minutes}:${seconds} ${ampm}`;
 
 
 document.getElementById("clear-btn").addEventListener("click",function(){
-        
-    activityContainer.innerHTML = "";
-  
+    
+    activityContainer.innerHTML = '';
+    
+    
 })
 
-// const theBtn = document.querySelectorAll(".the-btn")
-// for (let index = 0; index < theBtn.length; index++) {
-//     const element = theBtn[index];
 
-//     console.log(element)
-    
-// }
 
 
 
